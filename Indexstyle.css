@@ -1,0 +1,124 @@
+
+header{
+width: 100vw;
+height: 15vm;
+background-color:#343a40;
+top: 100;
+position:absolute;
+margin-top: 10px;
+margin-bottom:100px;
+}
+
+ul{
+    text-decoration: none;
+    width: 200px;
+    border:solid;
+}
+ul li a{
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+   
+  }
+  header{
+    color: #ffffff ;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px;
+    background-color: rgba(58, 144, 165, 0.896);
+
+  }
+  
+  .nav-one {
+    text-align: center;
+    font-size: 20px;
+  }
+  
+    
+  .nav-two {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+     width: 95%;
+  }
+  a{
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: medium;
+  }
+  .home-sec{
+    text-align: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    color: white;
+    background-size: cover;
+    padding: 25px;;
+  }
+  .home-sec>h1{
+    font-size: 50px;
+  }
+  
+  .about-sec{
+    background-color: rgb(51, 66, 66);
+     background-repeat: no-repeat;
+       
+  }
+  .about-sec button{
+    background-color: rgb(41, 41, 182);
+    border-radius: 5px;
+    height: 100%;
+    padding: 1%;
+    color: #ffffff;
+  }
+  
+  .product-sec{
+    color: ;
+    text-align: center;
+    height: 50vh;
+    background-image: url(./assets/bg-product.jpg);
+  }
+  .product-sec>h1,p{
+    padding: 2%;
+    font-weight: 800;
+  }
+  .product-sec>h2{
+    color: rgb(1, 5, 15);
+     font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .career-sec{
+    background-color: rgb(13, 13, 39);
+    color: #ffffff;
+  }
+  .career-sec p {
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+  }
+  .contact-sec{
+    background-color: bisque;
+  }
+  .career-sec p{
+    columns: rgb(102, 101, 101);
+  }
+  footer{
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    /* height: 5vh; */
+    padding: 30px;
+    
+  }

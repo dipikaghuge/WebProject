@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Details</title>
+  <script>
+    function calculateLoan() {
+      var employeeID = document.getElementById('employeeID').value;
+      var designation = document.getElementById('designation').value;
+      var loanAmount = parseFloat(document.getElementById('loanAmount').value);
+      var interestRate = 0;
+
+      if (employeeID.length < 4 || employeeID.charAt(0) !== 'E') {
+        alert('Invalid Employee ID. It must be at least four characters and start with the letter E.');
+        return;
+      }
+
+      switch (designation) {
+        case 'Assistent':
+          interestRate = 0.1;
+          break;
+        case 'Developer':
+          interestRate = 0.08;
+          break;
+        default:
+          interestRate = 0.05;
+      }
+
+      var totalInterest = loanAmount * interestRate;
+      var totalAmount = loanAmount + totalInterest;
+
+      document.getElementById('result').innerHTML = 'Total Interest: $' + totalInterest.toFixed(2) + '<br>Total Amount Payable: $' + totalAmount.toFixed(2);
+    }
+  </script>
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Details Form</title>
+</head>
+<body >
+  <form  style="background-color: beige; align-content: center; margin: 100px 500px">
+    <table border="2">
+        <h1>Employee Lone Information</h1>
+      <tr>
+        <th>Employee ID</th>
+        <td><input type="text" name="employeeId" 
+            placeholder="Enter Employee ID" id="employeeID"></td>
+      </tr>
+      <tr>
+        <th>Name</th>
+        <td><input type="text" name="name" 
+            placeholder="Enter Name" id="name"></td>
+      </tr>
+      <tr>
+        <th>Designation</th>
+        <td><input type="text" name="designation" 
+            placeholder="Enter Designation" id="designation"></td>
+      </tr>
+      <tr>
+        <th>Loan Amount</th>
+        <td><input type="text" name="loanAmount" 
+            placeholder="Enter Loan Amount" id="loanAmount"></td>
+      </tr>
+      <tr>
+        <th>Date of Loan Taken</th>
+        <td><input type="text" name="loanDate"
+             placeholder="mm/dd/yyyy" id="loanDate"></td>
+      </tr>
+      <tr>
+        <th>Interest</th>
+        <td><input type="text" name="interest"
+             placeholder="Enter Interest" id="interest"></td>
+      </tr>
+      <tr>
+        <th>Maturity Date</th>
+        <td><input type="text" name="maturityDate" 
+            placeholder="mm/dd/yyyy" id="maturityDate"></td>
+      </tr>
+    </table>
+    <button type="button" onclick="calculateLoan()" style="margin: 50px 40px;"> Calculate</button>
+    <div id="result"></div>
+</form>
+</body>
+</html>
